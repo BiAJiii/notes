@@ -48,6 +48,12 @@
 
 
 
+## Package.json配置
+
+> npm init --yes
+
+
+
 # 包的使用
 
 > 在没有webpack打包前，需要通过搜索整个node_module文件目录去定位包的路径，再手动导入到html中，如<script src="xxx”>；
