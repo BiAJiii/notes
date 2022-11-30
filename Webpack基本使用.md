@@ -69,14 +69,18 @@ CSS和JS的模块化语法，目前都无法被浏览器兼容。因此开发环
 
 > ```
 > {
->   "name": "blog",
->   "version": "1.0.0",
->   "main": "index.js",
->   "license": "MIT",
->   "devDependencies": {
->     "webpack": "^5.74.0",
->     "webpack-cli": "^4.10.0"
->   }
+> "name": "blog",
+> "version": "1.0.0",
+> "main": "index.js",
+> "scripts": {
+> //可以通过build命令直接执行webpack
+>     "build": "webpack"
+>   },
+> "license": "MIT",
+> "devDependencies": {
+>  "webpack": "^5.74.0",
+>  "webpack-cli": "^4.10.0"
+> }
 > } 
 > ```
 
@@ -92,12 +96,16 @@ npx webpack无法直接转移css文件，需要安装两个loader
 
 > ```
 > module:{
->         rules:[{
->             test: /\.css$/i,
->             use: ["style-loader","css-loader"],
->         }
->         ],//数组中每个元素对应一个loader配置
->     }
+>      rules:[{
+>      	 //test指定的是规则生效的文件
+>          test: /\.css$/i,
+>          //要使用的loader
+>          use: ["style-loader","css-loader"],
+>          //要排除的文件
+>          exclude: /node-modules/
+>      }
+>      ],//数组中每个元素对应一个loader配置
+>  }
 > ```
 
 对于图片这种静态类型文件，不需要使用loader匹配。
@@ -142,6 +150,10 @@ npx webpack无法直接转移css文件，需要安装两个loader
 >    	...
 >     }
 > ```
+
+HtmlWebpackPlugin()中也可以进行配置=>HtmlWebpackPlugin({title: " ",template:"模板路径"})
+
+
 
 
 
