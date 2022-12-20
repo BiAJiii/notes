@@ -71,7 +71,7 @@
 		computed: mapGetters(['mmm'])
 		methods: mapActions(['zzz'])
 	}
-
+	
 	{{mmm}} @click="zzz(data)"
 
 
