@@ -6,7 +6,7 @@
 
 安装路径：`D:\typora\Typora`
 
-![image-20230104173203948](C:\Users\sing8\AppData\Roaming\Typora\typora-user-images\image-20230104173203948.png)
+![image-20230104173203948](https://github.com/BiAJiii/imgsBed/blob/main/imgs/202301051355423.png)
 
 
 
